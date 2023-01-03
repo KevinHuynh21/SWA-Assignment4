@@ -52,11 +52,6 @@ const API_URL = "http://localhost:9090/";
 
 /* ---------------------------- API COMMUNICATION --------------------------- */
 
-export function logout() {
-  localStorage.removeItem("user");
-  localStorage.removeItem("currentGameId");
-}
-
 export function getGames() {
   return axios.get(API_URL + "games", {
     params: {
@@ -655,4 +650,9 @@ function initialBoardFill<T>(
   };
 
   return tilePieces;
+}
+
+export function logout() {
+  localStorage.removeItem("user");
+  localStorage.removeItem("currentGameId");
 }

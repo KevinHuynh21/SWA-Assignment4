@@ -2,12 +2,19 @@
     <div class="container">
         <div>Game number: {{score.id}}</div>
         <div>Score: {{score.score}}</div>
+        <div>User: {{username}}</div>
     </div>
 </template>
   
   <script>
 
   export default {
+    data(){
+      return{
+        username: undefined
+      }
+    },
+    methods:{},
     props: {
         score: undefined,
     }
